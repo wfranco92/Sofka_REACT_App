@@ -7,12 +7,16 @@ function CreateTodoButton(props) {
   };
 
   return (
-    <button
-      className="CreateTodoButton"
-      onClick={onClickButton}
-    >
-      +
-    </button>
+    <React.Fragment>
+      <button
+        className="CreateTodoButton"
+        onClick={onClickButton}
+      >
+        +
+      </button>
+      <span className='LableButtonTask'> Add Task</span>
+    </React.Fragment>
+
   );
 }
 
