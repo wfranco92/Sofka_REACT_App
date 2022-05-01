@@ -27,7 +27,7 @@ function TodoFormUser() {
       <textarea
         value={newUserValue}
         onChange={onChange}
-        placeholder="Pepiito Perez"
+        placeholder="Pepito Perez"
       />
       <div className="TodoForm-buttonContainer">
         <button
