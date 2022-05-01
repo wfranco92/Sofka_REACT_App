@@ -9,6 +9,8 @@ function TodoProvider(props) {
     saveItem: saveTodos,
     loading,
     error,
+    user: usuario,
+    saveUser: guardar,
   } = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
   const [openModal, setOpenModal] = React.useState(false);
@@ -18,6 +20,11 @@ function TodoProvider(props) {
   const totalTodos = todos.length;
 
   let searchedTodos = [];
+  let user = usuario
+
+  const addUser = (text) =>{
+      user = text;
+  }
 
   if (!searchValue.length >= 1) {
     searchedTodos = todos;
@@ -51,6 +58,10 @@ function TodoProvider(props) {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
+
+  const guardarUsuario = (text) => {
+    guardar(text)
+  }
   
   return (
     <TodoContext.Provider value={{
@@ -68,6 +79,9 @@ function TodoProvider(props) {
       setOpenModal,
       openModalUser,
       setOpenModalUser,
+      user,
+      addUser,
+      guardarUsuario,
     }}>
       {props.children}
     </TodoContext.Provider>

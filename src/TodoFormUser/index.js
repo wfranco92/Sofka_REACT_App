@@ -1,40 +1,40 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext';
-import './TodoForm.css';
+import './TodoFormUser.css';
 
-function TodoForm() {
-  const [newTodoValue, setNewTodoValue] = React.useState('');
+function TodoFormUser() {
+  const [newUserValue, setNewUserValue] = React.useState('');
   const {
-    addTodo,
-    setOpenModal,
+    guardarUsuario,
+    setOpenModalUser,
   } = React.useContext(TodoContext);
-
+  
   const onChange = (event) => {
-    setNewTodoValue(event.target.value);
+    setNewUserValue(event.target.value);
   };
   const onCancel = () => {
-    setOpenModal(false);
+    setOpenModalUser(false);
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    addTodo(newTodoValue);
-    setOpenModal(false);
+    guardarUsuario(newUserValue);
+    setOpenModalUser(false);
   };
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Escribe tu nuevo TODO</label>
+      <label>¿Cual es tu nombre?</label>
       <textarea
-        value={newTodoValue}
+        value={newUserValue}
         onChange={onChange}
-        placeholder="Cortar la cebolla oara el almuerzo"
+        placeholder="Pepiito Perez"
       />
       <div className="TodoForm-buttonContainer">
         <button
           type="button"
           className="TodoForm-button TodoForm-button--cancel"
           onClick={onCancel}
-        >
+          >
           Cancelar
         </button>
         <button
@@ -48,4 +48,4 @@ function TodoForm() {
   );
 }
 
-export { TodoForm };
+export { TodoFormUser }

@@ -10,6 +10,7 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { CreateUserButton } from '../CreateUserButton';
 import { Modal } from '../Modal';
 import { ModalUser } from '../ModalUser';
+import { TodoUser } from '../TodoUser'
 
 function AppUI() {
   const {
@@ -26,6 +27,7 @@ function AppUI() {
 
   return (
     <React.Fragment>
+      <TodoUser />
       <TodoCounter />
       <TodoSearch />
 
@@ -65,6 +67,8 @@ function AppUI() {
         setOpenModal={setOpenModal}
       />
     </React.Fragment>
+
+
   );
 }
 
