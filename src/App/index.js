@@ -5,9 +5,12 @@ import { AppUI } from './AppUI';
 
 function App() {
   return (
-    <TodoProvider>
-      <AppUI />
-    </TodoProvider>
+    <div>
+      <TodoProvider>
+        <AppUI />
+      </TodoProvider>
+    </div>
+
   );
 }
 

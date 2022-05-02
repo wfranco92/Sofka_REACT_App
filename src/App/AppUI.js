@@ -31,12 +31,14 @@ function AppUI() {
       <TodoCounter />
       <TodoSearch />
 
+      <h3>Lista de To Do</h3>
+
       <TodoList>
         {error && <p>Desespérate, hubo un error...</p>}
         {loading && <p>Estamos cargando, no desesperes...</p>}
         {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
 
-        {searchedTodos.map(todo => (
+        {searchedTodos.length > 0 ? searchedTodos.map(todo => (
           <TodoItem
             key={todo.text}
             text={todo.text}
@@ -44,7 +46,9 @@ function AppUI() {
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
           />
-        ))}
+        )) : <h2> No hay lista de To Do asociada a la busqueda</h2>}
+
+
       </TodoList>
 
       {!!openModalUser && (

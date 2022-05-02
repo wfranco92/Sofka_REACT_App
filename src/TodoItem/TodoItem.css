@@ -41,9 +41,15 @@
 
 .Icon-delete {
   position: absolute;
-  top: -24px;
   right: 0;
 }
-.Icon-delete:hover {
-  color: red;
+
+.icon-check{
+  width: 35px;
+  height: 30px;
+}
+
+.icon-check:hover{
+  width: 40px;
+  height: 35px;
 }
