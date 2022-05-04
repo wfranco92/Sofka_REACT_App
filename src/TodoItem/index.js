@@ -7,7 +7,12 @@ import close from '../assets/img/cerrar.png'
 function TodoItem(props) {
 
   const onclick = (e)=> {
-    e.target.src = checked;
+    if(e.target.src === check){
+      e.target.src = checked;
+      console.log(e.target.src)
+    }else{
+      e.target.src = check;
+    }
   }
 
   return (
