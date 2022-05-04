@@ -43,4 +43,10 @@ se implementa
 
 ![image](https://user-images.githubusercontent.com/61658807/166332901-fad7437b-6ea0-4db5-96c9-69b4e7ce3278.png)
 
+6. se implementa funcionalidad para marcar o desmarcar un todo, (deshacer accion)
+
+![image](https://user-images.githubusercontent.com/61658807/166618550-19b2e8e3-6b7a-47cc-9837-f9ef7a368155.png)
+![image](https://user-images.githubusercontent.com/61658807/166618559-50c861fa-3782-4c96-bc71-25b13cc2a4fc.png)
+
+
 
